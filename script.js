@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let score = 0;
 
   // Liste de mots pour la question bonus
-  const bonusWords = ["pPomme de terre",
+  const bonusWords = ["Pomme de terre",
                       "Ornithorynque",
                       "Hamster",
                       "Pingouin",
