@@ -136,14 +136,10 @@ ${responses || "Aucune question répondue"}
     // Copie dans le presse-papier
     navigator.clipboard.writeText(textToCopy).then(() => {
       // Afficher et masquer le message
-      copyNotification.classList.add("show");
+      copyNotification.style.display = "block";
       setTimeout(() => {
-        copyNotification.classList.remove("show");
-        copyNotification.classList.add("hide");
-        setTimeout(() => {
-          copyNotification.classList.remove("hide");
-        }, 1000); // Délai pour que l'animation de disparition s'achève
-      }, 2000); // Durée d'affichage du message
+        copyNotification.style.display = "none";
+      }, 3000); // Notification disparaît après 3 secondes
     }).catch((err) => {
       console.error("Erreur lors de la copie : ", err);
       alert("Une erreur est survenue lors de la copie.");
