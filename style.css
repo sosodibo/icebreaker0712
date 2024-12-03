@@ -86,7 +86,15 @@ li {
 /* Labels and Checkboxes */
 label {
   font-size: 16px;
-  flex: 1;
+  flex: 3; /* Donne plus d'espace au texte */
+}
+
+.checkbox-container {
+  display: flex;
+  gap: 10px; /* Espacement entre les cases */
+  justify-content: flex-end;
+  flex: 2; /* Taille fixe pour toutes les zones de cases */
+  align-items: center; /* Alignement vertical */
 }
 
 input[type='checkbox'] {
@@ -105,6 +113,7 @@ input[type='checkbox'] {
   background-color: #a71d2a;
 }
 
+/* Copy Notification */
 #copy-notification {
   margin-top: 10px;
   padding: 10px;
@@ -115,6 +124,8 @@ input[type='checkbox'] {
   display: none;
   animation: fade-out 3s forwards;
 }
+
+/* Subtitle Styling */
 .subtitle {
   font-size: 14px; /* Taille légèrement plus petite pour indiquer un sous-texte */
   color: #6c757d; /* Couleur gris clair */
@@ -125,6 +136,8 @@ input[type='checkbox'] {
   letter-spacing: 0.5px; /* Espacement des lettres pour une meilleure lisibilité */
   line-height: 1.5; /* Espace entre les lignes pour aérer le texte */
 }
+
+/* Fade-in animation for subtitle */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -135,11 +148,22 @@ input[type='checkbox'] {
     transform: translateY(0);
   }
 }
+.category-title {
+  font-size: 18px;
+  color: #810303;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
 
 .subtitle {
   animation: fadeIn 1s ease-in-out;
 }
 
+/* Fade-out animation for copy-notification */
 @keyframes fade-out {
   0% {
     opacity: 1;
