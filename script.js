@@ -55,7 +55,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const checkbox = document.createElement("input");
       checkbox.type = "checkbox";
       checkbox.id = `question-${index}`;
-      checkbox.addEventListener("change", () => togglePoints(checkbox, question.points));
+      checkbox.addEventListener("change", () => {
+        togglePoints(checkbox, question.points);
+        moveToBottomIfChecked(listItem, checkbox);
+      });
 
       listItem.appendChild(label);
       listItem.appendChild(checkbox);
@@ -68,7 +71,13 @@ document.addEventListener("DOMContentLoaded", () => {
     questions.forEach((_, index) => {
       const checkbox = document.getElementById(`question-${index}`);
       const isChecked = localStorage.getItem(`question-${index}`) === "true";
-      if (checkbox) checkbox.checked = isChecked;
+      if (checkbox) {
+        checkbox.checked = isChecked;
+
+        // Déplacer les questions déjà cochées en bas
+        const listItem = checkbox.closest("li");
+        if (isChecked) moveToBottomIfChecked(listItem, checkbox);
+      }
     });
   }
 
@@ -82,6 +91,15 @@ document.addEventListener("DOMContentLoaded", () => {
     scoreDisplay.textContent = score;
     localStorage.setItem("score", score);
     localStorage.setItem(checkbox.id, checkbox.checked);
+  }
+
+  // Déplacer une question cochée en bas de la liste
+  function moveToBottomIfChecked(listItem, checkbox) {
+    if (checkbox.checked) {
+      questionList.appendChild(listItem); // Déplace l'élément à la fin
+    } else {
+      questionList.prepend(listItem); // Remet l'élément au début si décoché
+    }
   }
 
   // Réinitialisation de l'application
