@@ -105,27 +105,14 @@ input[type="checkbox"] {
 }
 
 #copy-notification {
-  position: absolute; /* Position absolue pour flotter au-dessus des autres éléments */
-  top: 10px; /* Ajuste la hauteur pour qu'il s'affiche au-dessus des boutons */
-  left: 50%; /* Centre horizontalement */
-  transform: translateX(-50%); /* Ajuste pour centrer réellement */
-  background-color: transparent; /* Supprime la bordure en simulant l’absence de fond */
-  color: #28a745; /* Vert pour le texte */
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
   font-size: 14px;
-  font-weight: bold;
-  z-index: 1000; /* Garantit que le message est au-dessus */
-  display: none; /* Caché par défaut */
-  transition: opacity 0.5s ease-in-out; /* Animation de fondu */
-}
-
-#copy-notification.show {
-  display: block; /* Montre l'élément */
-  opacity: 1; /* Rendre visible */
-}
-
-#copy-notification.hide {
-  opacity: 0; /* Le texte disparaît progressivement */
-  transition: opacity 1s ease-in-out; /* Animation de sortie plus lente */
+  border-radius: 5px;
+  display: none;
+  animation: fade-out 3s forwards;
 }
 
 @keyframes fade-out {
