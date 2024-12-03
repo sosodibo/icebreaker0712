@@ -9,18 +9,23 @@
   <body>
     <div class="container">
       <div id="welcome-screen">
-        <h1>Bienvenue !</h1>
-        <p>Entrez votre prénom pour commencer :</p>
-        <input type="text" id="name-input" placeholder="Votre prénom" />
-        <button id="start-button">Commencer</button>
+        <h1>Bienvenue</h1>
+        <p>Entre ton pseudo pour commencer ta quête :</p>
+        <input
+          type="text"
+          id="name-input"
+          placeholder="Ton pseudo ou prénom badass"
+        />
+        <button id="start-button">C'est parti !</button>
       </div>
-
       <div id="question-screen" style="display: none;">
         <h2 id="welcome-message"></h2>
-        <p>Vos points d'expérience : <span id="score">0</span></p>
+        <p id="subtitle" class="subtitle">Voici ton tableau des quêtes. Par où vas-tu commencer ?"</p>
+        <p>Ton XP : <span id="score">0</span></p>
         <ul id="question-list"></ul>
-        <div id="copy-notification" style="display: none;">Réponses copiées dans le presse-papier !</div>
-        <button id="share-button">Partager mes réponses actuelles</button>
+        <button id="share-button">Partager tes exploits</button>
+        <div id="copy-notification" style="display: none;">
+          Copié dans le presse-papier !</div>
         <button id="reset-button">Tout réinitialiser</button>
       </div>
     </div>
