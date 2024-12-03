@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
   { category: "Actions soirée", text: "Bois un verre d’eau", points: 10 },
   { category: "Actions soirée", text: "Chante en duo ou trio au karaoke", points: 15 },
   { category: "Actions soirée", text: "Chante en duo ou trio avec des gens que tu ne connais", points: 20 },
-  { category: "Actions soirée", text: "Tu as le courage de chanter seul·e au karaoké", points: 35 }
+  { category: "Actions soirée", text: "Tu as le courage de chanter seul·e au karaoké", points: 35 },
   { category: "Bonus", text: `Tu dois réussir à caser le mot "${bonusWord}" dans une conversation`, points: 20 },
   ];
 
