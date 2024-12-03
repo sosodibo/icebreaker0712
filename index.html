@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Icebreaker App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="welcome-screen">
+        <h1>Bienvenue !</h1>
+        <p>Entrez votre prénom pour commencer :</p>
+        <input type="text" id="name-input" placeholder="Votre prénom" />
+        <button id="start-button">Commencer</button>
+      </div>
+
+      <div id="question-screen" style="display: none;">
+        <h2 id="welcome-message"></h2>
+        <p>Vos points d'expérience : <span id="score">0</span></p>
+        <ul id="question-list"></ul>
+        <button id="share-button">Partager mes réponses actuelles</button>
+            <div id="copy-notification" style="display: none;">Réponses copiées dans le presse-papier !</div>
+        <button id="reset-button">Tout réinitialiser</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
