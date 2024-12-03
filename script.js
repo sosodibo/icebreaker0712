@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (storedName) {
     welcomeScreen.style.display = "none";
     questionScreen.style.display = "block";
-    welcomeMessage.textContent = `Bienvenue, ${storedName} !`;
+    welcomeMessage.textContent = `À toi de jouer ${storedName} !`;
     score = parseInt(storedScore) || 0;
     scoreDisplay.textContent = score;
     loadQuestions();
