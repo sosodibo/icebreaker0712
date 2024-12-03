@@ -217,9 +217,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const now = new Date();
     const dateTime = now.toLocaleString();
     const textToCopy = `
-${name}, points d'xp : ${score} à ${dateTime}
+Salut PNJ, c'est ${name},
+j'ai ${score} points d'xp
+À ${dateTime}
 
-Questions répondues :
+Je viens rendre mes quêtes :
 ${responses || "Aucune question répondue"}
     `.trim();
 
