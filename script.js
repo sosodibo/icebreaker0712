@@ -15,13 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // Liste de mots pour la question bonus
   const bonusWords = ["Pomme de terre",
                       "Ornithorynque",
-                      "Hamster",
-                      "Pingouin",
+                      "Moustiquaire",
+                      "Caoutchouc",
                       "Hélicoptère",
                       "Trampoline",
                       "Toupie",
                       "Trombone",
-                      "Chocolat",
+                      "Savonnette",
                       "Écureuil",
                       "Lama",
                       "Girafe",
@@ -29,12 +29,12 @@ document.addEventListener("DOMContentLoaded", () => {
                       "Hérisson",
                       "Canapé",
                       "Hippopotame",
-                      "Otarie",
+                      "Toboggan",
                       "Canard",
-                      "Noël",
+                      "Karcher",
                       "Rat mignon",
                       "Dragon",
-                      "Ketchup",
+                      "Mandibule",
                       "Coquillage",
                       "Pizza"];
   let bonusWord = getRandomWord(); // Génère un mot aléatoire au démarrage
@@ -44,25 +44,25 @@ document.addEventListener("DOMContentLoaded", () => {
   { category: "Arrivée", text: "Tu es arrivé·e dans les 10 premiers à la soirée", points: 5 },
   { category: "Arrivée", text: "Mets une étiquette avec ton prénom", points: 5 },
   { category: "Arrivée", text: "Réussis à garder ton étiquette collée toute la soirée", points: 10 },
-  { category: "Parler avec des inconnu·e·s", text: "Trouve quelqu’un fan de Zelda", points: 15 },
+  { category: "Parler avec des inconnu·e·s", text: "Trouve quelqu’un fan de Zelda", points: 10 },
   { category: "Parler avec des inconnu·e·s", text: "Trouve quelqu’un qui a travaillé chez Shadow", points: 20 },
   { category: "Parler avec des inconnu·e·s", text: "Trouve la personne qui connaît Solène depuis le plus longtemps", points: 15 },
-  { category: "Parler avec des inconnu·e·s", text: "Trouve quelqu’un qui a participé à un jeu télé", points: 25 },
-  { category: "Parler avec des inconnu·e·s", text: "Demande son hobby préféré à 3 personnes", points: 10, multiple: 3, },
-  { category: "Actions soirée", text: "Participe à une partie de jeu vidéo ou de jeu de société", points: 10, multiple: 4,},
+  { category: "Parler avec des inconnu·e·s", text: "Trouve quelqu’un qui a participé à un jeu télé", points: 20 },
   { category: "Parler avec des inconnu·e·s", text: "Trouve qui est complètement fan de parcs d’attractions", points: 20 },
   { category: "Parler avec des inconnu·e·s", text: "Trouve quelqu’un qui parle plus de 2 langues couramment", points: 20 },
   { category: "Parler avec des inconnu·e·s", text: "Trouve le nom de l’animal de compagnie de quelqu’un", points: 5, multiple: 3, },
   { category: "Parler avec des inconnu·e·s", text: "Trouve quelqu’un qui n’habite pas en France", points: 15 },
-  { category: "Parler avec des inconnu·e·s", text: "Trouve quelqu’un qui a déjà rencontré des célébrités", points: 20 },
+  { category: "Parler avec des inconnu·e·s", text: "Trouve quelqu'un qui a les yeux bleus", points: 20 },
   { category: "Parler avec des inconnu·e·s", text: "Demande à quelqu’un quelle est la chose la plus insolite qu’iel a faite", points: 10, multiple: 3, },
-  { category: "Actions soirée", text: "Participe au Blind test", points: 15 },
-  { category: "Actions soirée", text: "Bois une boisson (alcool ou sans alcool)", points: 5, multiple: 3, },
-  { category: "Actions soirée", text: "Bois un verre d’eau", points: 10 },
-  { category: "Actions soirée", text: "Chante en duo ou trio au karaoke", points: 15 },
-  { category: "Actions soirée", text: "Chante en duo ou trio avec des gens que tu ne connais", points: 20 },
-  { category: "Actions soirée", text: "Tu as le courage de chanter seul·e au karaoké", points: 35 },
-  { category: "Bonus", text: `Tu dois réussir à caser le mot "${bonusWord}" dans une conversation`, points: 20 },
+  { category: "Parler avec des inconnu·e·s", text: "Demande son hobby préféré à quelqu'un", points: 10, multiple: 3, },
+  { category: "Activités", text: "Participe au Blind test", points: 15 },
+  { category: "Activités", text: "Participe à une partie de jeu vidéo ou de jeu de société", points: 10, multiple: 4,},
+  { category: "Activités", text: "Bois une boisson (avec ou sans alcool)", points: 5, multiple: 4, },
+  { category: "Activités", text: "Bois un verre d’eau", points: 10 },
+  { category: "Activités", text: "Chante avec des gens au karaoke", points: 15 },
+  { category: "Activités", text: "Chante en duo ou trio avec des gens que tu ne connais", points: 20 },
+  { category: "Activités", text: "Tu as le courage de chanter seul·e au karaoké", points: 35 },
+  { category: "Bonus", text: `Tu dois réussir à faire dire le mot "${bonusWord}" à quelqu'un dans une conversation`, points: 30 },
   ];
 
 
@@ -218,7 +218,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const dateTime = now.toLocaleString();
     const textToCopy = `
 Salut PNJ, c'est ${name},
-j'ai ${score} points d'xp
+J'ai ${score} points d'xp
 À ${dateTime}
 
 Je viens rendre mes quêtes :
